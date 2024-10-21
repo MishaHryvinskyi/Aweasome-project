@@ -1,20 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, SafeAreaView } from 'react-native';
+import { styles } from './styles';
+import CustomButton from './CustomButton';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Запустив =)</Text>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>
+      <Text style={styles.text}>Запустив =)</Text>
       <StatusBar style="auto" />
+
+      <CustomButton title="Натисни мене"
+        onPress={() => {
+          console.log('Clicked button')
+        }}
+        color='green'
+      ></CustomButton>
+
+<CustomButton title="Ще кнопка"
+        onPress={() => {
+          console.log('Clicked button2')
+        }}
+        color='blue'
+      ></CustomButton>
     </View>
+
+    </SafeAreaView>
+    
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
