@@ -6,15 +6,21 @@ export const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+
     },
     text: {
         fontSize: 30,
         color: 'pink'
     },
-    button: {
-        padding: 10,
-        margin: 10,
-        borderRadius: 5,
-        alignItems: "center"
+    item: {
+      padding:20,
+      backgroundColor: 'pink'
+    },
+    title: {
+      fontSize: 16,
+    },
+    separator: {
+      height: 1,
+      backgroundColor: "#EEE",
     }
   });
